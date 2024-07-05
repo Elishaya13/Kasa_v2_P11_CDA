@@ -7,9 +7,7 @@
   flex-direction: column;
 
   &__container {
-    // position: relative;
     display: flex;
-    //  flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 30px;
@@ -55,6 +53,8 @@
 
       p {
         font-size: 12px;
+        font-weight: 400;
+        line-height: 1.5;
       }
     }
   }
@@ -100,7 +100,7 @@
       width: 900px;
       &_text {
         p {
-          font-size: 24px;
+          font-size: 18px;
         }
       }
     }

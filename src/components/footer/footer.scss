@@ -22,8 +22,7 @@
 
   // *** Responsive *** //
 
-  @include tabletMinBreakPoint {
-    margin: auto;
+  @include tabletMinBreakPoint {  
     width: $screen-tablet;
     margin-top: 40px;
 
@@ -34,6 +33,7 @@
 
   @include laptopMinBreakPoint {
     width: $screen-laptop;
+    padding: 2rem
   }
 
   @include largeMinBreakPoint {
