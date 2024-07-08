@@ -44,12 +44,23 @@
     top: -5px;
     background-color: $tertiary-color;
     border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0; 
+    opacity: 0;
+    visibility: hidden;
+
+    &.open {
+      max-height: 500px;
+      opacity: 1;
+      visibility: visible;
+    }
 
     &_text {
       margin: auto;
       margin-top: 15px;
       margin-bottom: 15px;
-      width: 320px;
+      width: 320px;     
 
       p {
         font-size: 12px;
