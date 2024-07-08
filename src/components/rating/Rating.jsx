@@ -1,33 +1,35 @@
-import { useEffect, useState } from "react";
-import "./rating.scss";
-import { IMAGES } from "../../assets/images/images";
+import './rating.scss';
+import { IMAGES } from '../../assets/images/images';
 
-const Rating = ({ rating }) => {
-  const [stars, setStars] = useState([]);
-  const [maxRate] = useState(5);
+// Define a constant for the maximum rating value
+const MAX_RATE = 5;
 
-  useEffect(() => {
-    let tmpArray = [];
-
-    // For each rate until the max rate
-    for (let i = 1; i <= maxRate; i++) {
-      // We compare with the note received "rating", red image if it is less than or equal to the rating note, otherwise gray image
-      let starImg = i <= rating ? IMAGES.RED_STAR_IMG : IMAGES.GREY_STAR_IMG;
-
-      // We push on the stars array the code to write with the good star img
-      tmpArray.push(
-        <li key={i}>
-          <img src={starImg} alt="star icone"></img>
-        </li>
-      );
-    }
-    setStars([...tmpArray]);
-  }, [rating, maxRate]);
-
-  return (
-    <div className="rating">
-      <div className="rating__stars">{stars}</div>
+/**
+ * Displays a 5-star rating system.
+ *
+ * This component visualizes a rating by showing a specific number of red stars (active) based on the `rating` prop, with the rest being grey (inactive).
+ *
+ * @param {{ rating: number }} props - Contains the rating value.
+ * @param {number} props.rating - The rating value from 0 to 5.
+ */
+const Rating = ({ rating }) => (
+  <div className='rating'>
+    <div className='rating__stars'>
+      {
+        // Create an array of MAX_RATE elements, spread it to use map
+        [...Array(MAX_RATE)].map((star, index) => (
+          // For each element, render a list item
+          <li key={index}>
+            {/* If the current index is less than or equal to the rating, show RED_STAR_IMG, otherwise show GREY_STAR_IMG */}
+            <img
+              src={rating <= index ? IMAGES.GREY_STAR_IMG : IMAGES.RED_STAR_IMG}
+              alt='star icone'
+            />
+          </li>
+        ))
+      }
     </div>
-  );
-};
+  </div>
+);
+
 export default Rating;
