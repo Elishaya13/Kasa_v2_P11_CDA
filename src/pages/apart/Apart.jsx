@@ -74,13 +74,14 @@ const Apart = () => {
         </div>
       </div>
     );
-  } else if (error) {
+  }
+
+  if (error) {
     return <Navigate to='/error' />;
   }
   // Call the Loader component while waiting for the data
-  else {
-    return <Loader />;
-  }
+  return <Loader />;
+  
 };
 
 export default Apart;
