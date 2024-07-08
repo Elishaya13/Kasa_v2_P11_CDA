@@ -1,7 +1,7 @@
 import Collapse from '../../../components/collapse/Collapse';
 import './aboutBody.scss'
 import arrow_close from '../../../assets/images/arrow_down.svg'
-import { ABOUT_TXT } from '../../../constants/aboutStrings';
+import { ABOUT_TXT } from '../../../constants/aboutPageStrings';
 
 
 const AboutBody = () => {
