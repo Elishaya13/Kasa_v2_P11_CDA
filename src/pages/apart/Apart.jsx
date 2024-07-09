@@ -1,14 +1,17 @@
-import './apart.scss';
 import { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
+
+// api
 import apiAparts from '../../services/apiAparts';
 
 // Components //
-import Slideshow from '../../components/slideshow/Slideshow';
-import TagLocation from '../../components/tagLocation/TagLocation';
-import Rating from '../../components/rating/Rating';
 import Collapse from '../../components/collapse/Collapse';
 import Loader from '../../components/loader/Loader';
+import Rating from '../../components/rating/Rating';
+import Slideshow from '../../components/slideshow/Slideshow';
+import TagLocation from '../../components/tagLocation/TagLocation';
+
+import './apart.scss';
 
 const Apart = () => {
   const { apartId } = useParams();

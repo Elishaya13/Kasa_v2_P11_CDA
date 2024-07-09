@@ -1,5 +1,5 @@
-import './collapse.scss';
 import { useState } from 'react';
+import './collapse.scss';
 import { IMAGES } from '../../assets/images/images';
 
 /**

@@ -1,8 +1,11 @@
-import  { useState, useEffect } from 'react';
-import apiAparts from '../../../services/apiAparts'
-import Card from '../../../components/card/Card.jsx';
-import './gallery.scss'
-import Loader from '../../../components/loader/Loader.jsx';
+import { useState, useEffect } from 'react';
+
+import apiAparts from '../../../services/apiAparts';
+
+import Card from '../../../components/card/Card';
+import Loader from '../../../components/loader/Loader';
+
+import './gallery.scss';
 
 const Gallery = () => {
   const [aparts, setAparts] = useState();

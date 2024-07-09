@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Home from '../pages/home/Home.jsx';
 
-import NotFound from '../pages/notFound/NotFound.jsx';
-import Layout from '../pages/Layout.jsx';
-import About from '../pages/about/About.jsx';
-import Apart from '../pages/apart/Apart.jsx';
+import About from '../pages/about/About';
+import Apart from '../pages/apart/Apart';
+import Home from '../pages/home/Home';
+import Layout from '../pages/Layout';
+import NotFound from '../pages/notFound/NotFound';
 
 const router = createBrowserRouter([
     {

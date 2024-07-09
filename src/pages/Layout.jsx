@@ -1,7 +1,9 @@
 import { Outlet } from "react-router-dom";
-import "./layout.scss";
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
+
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+
+import './layout.scss';
 
 const Layout = () => {
   return (

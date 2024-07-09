@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { IMAGES} from '../../assets/images/images';
-import './slideshow.scss'
-
+import './slideshow.scss';
+import { IMAGES } from '../../assets/images/images';
 
 const Slideshow = ({ pictures }) => {
   const [currentIndex, setIndex] = useState(0);

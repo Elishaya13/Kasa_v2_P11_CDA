@@ -1,6 +1,6 @@
-import './about.scss';
 import Banner from '../../components/banner/Banner';
 import Collapse from '../../components/collapse/Collapse';
+import './about.scss';
 import { IMAGES } from '../../assets/images/images';
 
 const texts = [
