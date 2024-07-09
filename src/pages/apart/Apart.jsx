@@ -1,16 +1,14 @@
-import { useState, useEffect } from "react";
-import { useParams, Navigate } from "react-router-dom";
-import apiAparts from "../../services/apiAparts";
-
-import "./apart.scss";
-import arrow_close from "../../assets/images/arrow_down.svg";
+import './apart.scss';
+import { useState, useEffect } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
+import apiAparts from '../../services/apiAparts';
 
 // Components //
-import Slideshow from "../../components/slideshow/Slideshow";
-import TagLocation from "../../components/tagLocation/TagLocation";
-import Rating from "../../components/rating/Rating";
-import Collapse from "../../components/collapse/Collapse";
-import Loader from "../../components/loader/Loader";
+import Slideshow from '../../components/slideshow/Slideshow';
+import TagLocation from '../../components/tagLocation/TagLocation';
+import Rating from '../../components/rating/Rating';
+import Collapse from '../../components/collapse/Collapse';
+import Loader from '../../components/loader/Loader';
 
 const Apart = () => {
   const { apartId } = useParams();
@@ -59,18 +57,15 @@ const Apart = () => {
         </div>
 
         <div className='apart__collapse'>
-          <Collapse
-            title='Description'
-            arrow={arrow_close}
-            text={apart.description}
-          />
-          <Collapse
-            title='Équipement'
-            arrow={arrow_close}
-            text={apart.equipments.map((equipement, index) => (
+          <Collapse title='Description'>
+            <p>{apart.description}</p>
+          </Collapse>
+
+          <Collapse title='Équipement'>
+            {apart.equipments.map((equipement, index) => (
               <li key={index}>{equipement}</li>
             ))}
-          />
+          </Collapse>
         </div>
       </div>
     );
@@ -81,7 +76,6 @@ const Apart = () => {
   }
   // Call the Loader component while waiting for the data
   return <Loader />;
-  
 };
 
 export default Apart;

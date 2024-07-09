@@ -17,7 +17,7 @@ const Rating = ({ rating }) => (
     <div className='rating__stars'>
       {
         // Create an array of MAX_RATE elements, spread it to use map
-        [...Array(MAX_RATE)].map((star, index) => (
+        [...Array(MAX_RATE)].map((_, index) => (
           // For each element, render a list item
           <li key={index}>
             {/* If the current index is less than or equal to the rating, show RED_STAR_IMG, otherwise show GREY_STAR_IMG */}

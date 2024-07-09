@@ -6,8 +6,6 @@ import Loader from '../../../components/loader/Loader.jsx';
 
 const Gallery = () => {
   const [aparts, setAparts] = useState();
-  // const [isData, setIsData] = useState(false);
-
   useEffect(() => {
     if (aparts === undefined) {
       apiAparts.getAparts().then((json) => {
