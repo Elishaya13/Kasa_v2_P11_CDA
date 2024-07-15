@@ -21,7 +21,9 @@ const Gallery = () => {
     <div className='gallery'>
       <div className='gallery__content'>
         {aparts ? (
-          aparts.map((apart) => <Card key={apart.id} {...apart} />)
+          aparts.map((apart) => (
+            <Card key={apart.id} {...apart} path='logements' />
+          ))
         ) : (
           <Loader />
         )}

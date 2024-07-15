@@ -5,7 +5,7 @@ import { IMAGES } from '../../assets/images/images';
 const Slideshow = ({ pictures }) => {
   const [currentIndex, setIndex] = useState(0);
 
-  // A get the last index
+  // Calculate the index of the last element in the pictures array
   const lastIndex = pictures.length - 1;
 
   /**

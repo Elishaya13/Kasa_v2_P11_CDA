@@ -20,7 +20,7 @@ const Rating = ({ rating }) => (
         [...Array(MAX_RATE)].map((_, index) => (
           // For each element, render a list item
           <li key={index}>
-            {/* If the current index is less than or equal to the rating, show RED_STAR_IMG, otherwise show GREY_STAR_IMG */}
+            {/* If the current index is less than or equal to the rating, show GREY_STAR_IMG, otherwise show RED_STAR_IMG*/}
             <img
               src={rating <= index ? IMAGES.GREY_STAR_IMG : IMAGES.RED_STAR_IMG}
               alt='star icone'

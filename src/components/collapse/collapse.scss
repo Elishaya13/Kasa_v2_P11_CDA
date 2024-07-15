@@ -45,7 +45,7 @@
     background-color: $tertiary-color;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
-    transition: max-height 0.75s ease-out;
+    transition: max-height 0.6s ease-out;
     max-height: 0; 
 
     &.open {
